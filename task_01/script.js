@@ -11,7 +11,7 @@ let appData = {
     },
     optionalExpenses: { // объект с необязательными расходами
     },
-    incam: Array = [], // массив данных с доп. доходом
+    incam: ArrayDop = [], // массив данных с доп. доходом
     savings: false
 };
 
