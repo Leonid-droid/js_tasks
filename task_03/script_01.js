@@ -11,7 +11,18 @@ let appData = {
 };
 
 let i = 0;
-while (i < 2) {
+// while (i < 2) {
+//     let a = prompt('Введите обязательную статью расходов в этом месяце', '');
+//     b = prompt('Во сколько обойдется?', '');
+//     if ((typeof (a)) === 'string' && (typeof (a) != null) && (typeof (b) != null) &&
+//         a != '' && b != '' && a.length < 50) { //проверка на тип строка и на отмену на пустую строку и длинну иенее 50 символов
+//         console.log('done');
+//         appData.expenses[a] = b;
+//         i++;
+//     }
+// }
+
+do {
     let a = prompt('Введите обязательную статью расходов в этом месяце', '');
     b = prompt('Во сколько обойдется?', '');
     if ((typeof (a)) === 'string' && (typeof (a) != null) && (typeof (b) != null) &&
@@ -21,6 +32,9 @@ while (i < 2) {
         i++;
     }
 }
+while (i < 2);
+
+
 
 console.log(appData);
 appData.moneyPerDay = appData.budget / 30 // Ежедневный уровень дохода
