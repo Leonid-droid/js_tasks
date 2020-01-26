@@ -22,24 +22,16 @@ while (i < 2) {
     }
 }
 
-function detectDayBudget() {
-    return appData.moneyPerDay = appData.budget / 30 // Ежедневный уровень дохода
-}
-detectDayBudget();
 console.log(appData);
-
+appData.moneyPerDay = appData.budget / 30 // Ежедневный уровень дохода
 alert('Ежедневная трата: ' + appData.moneyPerDay);
 
-
-function detectLevel(number) {
-    if (number < 100) {
-        console.log('Это минимальный уровень достатка.');
-    } else if (number >= 100 && appData.moneyPerDay < 2000) {
-        console.log('Средний уровень достатка.');
-    } else if (number > 2000) {
-        console.log('Высокий уровень достатка.');
-    } else {
-        console.log('Произошла ошибка.');
-    }
+if (appData.moneyPerDay < 100) {
+    console.log('Это минимальный уровень достатка.');
+} else if (appData.moneyPerDay >= 100 && appData.moneyPerDay < 2000) {
+    console.log('Средний уровень достатка.');
+} else if (appData.moneyPerDay > 2000) {
+    console.log('Высокий уровень достатка.');
+} else {
+    console.log('Произошла ошибка.');
 }
-detectLevel(appData.moneyPerDay);
